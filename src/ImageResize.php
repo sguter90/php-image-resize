@@ -386,6 +386,16 @@ class ImageResize
     {
         return $this->original_w;
     }
+    
+    /**
+     * Sets the source width
+     *
+     * @return integer
+     */
+    public function setSourceWidth($width)
+    {
+        $this->original_w = $width;
+    }
 
     /**
      * Gets source height
@@ -395,6 +405,16 @@ class ImageResize
     public function getSourceHeight()
     {
         return $this->original_h;
+    }
+    
+    /**
+     * Sets the source height
+     *
+     * @return integer
+     */
+    public function setSourceHeight($height)
+    {
+        $this->original_h = $height;
     }
 
     /**
@@ -415,6 +435,26 @@ class ImageResize
     {
         return $this->dest_h;
     }
+    
+    /**
+     * Get raw image
+     *
+     * @return resource 
+     */
+    public function getRawImage()
+    {
+		return $this->source_image;
+	}
+	
+	/**
+     * Get raw image
+     *
+     * @return resource 
+     */
+    public function setRawImage($image)
+    {
+		$this->source_image = $image;
+	}
 
     /**
      * Gets crop position (X or Y) according to the given position
